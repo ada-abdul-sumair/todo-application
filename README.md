@@ -29,6 +29,20 @@ performance and accessibility audit
 how the project can be cloned and run
 how to use the application
 
+### Branch naming conventions
+
+Branches should be identified as feature|task|bugfix|hotfix, followed by the JIRA task id and a description, for example:
+
+```
+feature/PIDEV-54_enforce_branch_naming_conventions
+```
+
+There is a committed .git-hooks folder containing a hook that enforces this rule. Please run the following command before you start making commits to this repo:
+
+```
+git config core.hooksPath .git-hooks
+```
+
 ## Project Workflow
 
 project management strategies
