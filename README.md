@@ -37,12 +37,6 @@ Branches should be identified as feature|task|bugfix|hotfix, followed by the JIR
 feature/PIDEV-54_enforce_branch_naming_conventions
 ```
 
-There is a committed .git-hooks folder containing a hook that enforces this rule. Please run the following command before you start making commits to this repo:
-
-```
-git config core.hooksPath .git-hooks
-```
-
 ## Project Workflow
 
 project management strategies
