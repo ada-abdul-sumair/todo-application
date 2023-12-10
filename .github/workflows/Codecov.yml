@@ -1,4 +1,15 @@
-- name: Upload coverage reports to Codecov
-  uses: codecov/codecov-action@v3
-  env:
-    CODECOV_TOKEN: ${{ secrets.88c68e91-ba97-4c94-8e59-cf086b517cc3 }}
+name: Upload coverage reports to Codecov
+on:
+  pull_request:
+    types: [synchronize, opened, reopened, ready_for_review]
+jobs:
+  upload-coverage:
+    name: Upload coverage reports to Codecov
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
