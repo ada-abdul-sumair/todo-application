@@ -1,4 +1,4 @@
-name: Upload coverage reports to Codecov
+name: Codecov
 on:
   pull_request:
     types: [synchronize, opened, reopened, ready_for_review]
