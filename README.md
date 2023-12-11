@@ -94,19 +94,38 @@ Git - version controlling
 - performance and accessibility audit
 Google Lighthouse (TO DO)
 
-## <ins>Instructions to Run the Application</ins> ABDUL-SUBHAN
+## <ins>Instructions to Run and Use the Application</ins>
 
-- how the project can be cloned and run
-Open GitHub link
-Git clone link
-At root level, `npm run start`
+### How to clone the repository
 
-- how to use the application
-Add text in textbox, press add button
-Edit button to open modal to change text
-Done button to strikethrough text to mark as done
-Delete button to delete todo
-'Delete all' button to delete all todos
+Navigate to the application's public GitHub repository via this link: 
+[`https://github.com/sumairruhani2/todo-application`](https://github.com/sumairruhani2/todo-application)
+
+Clone the repo locally by running `git clone ` followed by the HTTPS or SSH link 
+
+### How to start the application
+
+Open the codebase and run `npm i` from root level
+
+Run `npm run start` and wait until a browser opens with the application
+
+### Features of the application
+
+`Todo app homepage`
+![Todo homepage](./img/Todo%20homepage)
+
+`Added Todo`
+![Added Todo](./img/Added%20Todo.png)
+
+`Edit Todo popup`
+![Edited Todo](./img/Edited%20Todo.png)
+
+With this app, users can:
+- Add text in the textbox and submit with the `Add New Todo` button
+- Edit text of existing Todos with the edit button on the Todo
+- Mark Todos as done which adds a strikethrough to the text
+- Delete individial Todos with the delete button on the Todo
+- Delete all Todos with the `Delete All Todos` button
 
 ## <ins>Project Workflow</ins> ABDUL-SUBHAN
 
@@ -114,11 +133,35 @@ Delete button to delete todo
 Agile methodology: Scrum-Kanban hybrid
 Trunk-based development
 
-- retrospectives
+### Project management strategy
+
+This project adopted an agile strategy utilising the Scrum-Kanban hybrid frameworks. 
+The team decided this hybrid approach was the most suitable for this project for the following reasons:
+- Flexibility - Scrum provides structure with fixed-length sprints while accommodating changes in priorities and incorporating a continuous flow of work with Kanban
+- Continuous Delivery - A balance between regular delivery milestones with sprints in Scrum and a continuos delivery model with Kanban allows results to be yielded faster
+- Enhanced Visual Management - Kanban utilises collaborative visual boards to represent work flow
+- Enhanced Collaboration - Scrum promotes regular check-ins with regular ceremonies and communication and Kanban encourages continuous collaboration.
+
+### Retrospectives
+
+
+
 Daily stand-ups, give updates. Sometimes done over chat instead of a call - allowing greater flexibility and greater logging of chats
 
-- kanban board
-Jira board
+### Kanban board
+
+A kanban board was created using Jira Software. 
+2 types of tickets were used: features, for any new changes, and bugfixes, for fixing broken features
+The board contained the following columns:
+- `To Do` - all the created tickets were stored under this heading until picked up
+- `In Progress` - tickets were assigned and picked up in this column
+- `Review` - once a PR was created, the corresponding ticket was moved to this column
+- `Done` - once a PR was merged, tickets were marked as completed in this column
+
+
+The board can be viewed via this link:
+[`https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share`](https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share)
+
 
 ## <ins>Test Methodologies and Tools</ins> ABDUL-SUBHAN
 
