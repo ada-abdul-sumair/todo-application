@@ -127,11 +127,7 @@ With this app, users can:
 - Delete individial Todos with the delete button on the Todo
 - Delete all Todos with the `Delete All Todos` button
 
-## <ins>Project Workflow</ins> ABDUL-SUBHAN
-
-- project management strategies
-Agile methodology: Scrum-Kanban hybrid
-Trunk-based development
+## <ins>Project Workflow</ins>
 
 ### Project management strategy
 
@@ -144,9 +140,9 @@ The team decided this hybrid approach was the most suitable for this project for
 
 ### Retrospectives
 
-
-
-Daily stand-ups, give updates. Sometimes done over chat instead of a call - allowing greater flexibility and greater logging of chats
+As part of the Scrum framework, daily retrospectives were held at the earliest time in the mornings to provide updates regarding features, bugs, blockers or any other project detail. 
+Retrospectives sometimes took place Google Chat instead of a call via Google Meet; this made technical comments and questions easier to process and respond to appropriately. 
+Having only 2 members in the team allowed for greater flexibility in communication methods and timings
 
 ### Kanban board
 
@@ -196,7 +192,6 @@ Pre-push
 - Formatter 
 (prettier)
 Pre-commit
-- (mention trunk-based development) 
 - (conventional commits)
 
 - _Git Hooks_
