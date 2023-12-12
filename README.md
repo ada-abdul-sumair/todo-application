@@ -193,18 +193,6 @@ Run the script file to download and set up the git hook:
 ```
 
 ## <ins>CI Pipeline</ins> SUMAIR
-
-- how the CI pipelines were set up
-
-- snapshots of test suite results
-Pipeline screenshots
-
-- PR strategies applied
-Trunk-based development
-
-(make note about cannot merge until reviewed)
-(explain how actions work)
-
 ### _GitHub Actions_
 
 GitHub Actions are workflows defined in code, stored alongside the code in a repository. GitHub Actions automate the SDLC, from building and testing to deploying. They are triggered by events, and executed in GitHub-hosted runners, allowing easy integration with GitHub repositories. Likewise, they sit directly in the GitHub Pipeline, dictating what can be merged into the codebase, based on their outcomes.
@@ -217,7 +205,29 @@ The GitHub Actions integrated in this repository are:
 
 _Note: The automatic reviewer assign and automatic author assign features have been created as part of the same GitHub action_
 
+- **ESLint** - Every time a PR is created and pushed to, the ESLint Action runs, checking that the entire codebase (except excluded files) is following the preset ESLint config rules. It runs using NodeJS in the GitHub pipelines. If any errors are spotted, it will fail and prevent merging until addressed.
+
 - **Automated testing** - An Action has been written to automatically run all tests within the codebase in the pipeline, including all unit tests and integration tests. The action is triggered whenever a pull request is created, or updated. It runs using NodeJS in the GitHub pipeline and will log all of the tests that have successfully passed or failed during the testing process. If any tests fail, they are logged, and merging will be blocked until it is fixed. This ensures that only high quality code that passes the tests are merged.
+
+Tests passing in pipeline:
+![Tests passing in pipeline](./public/snapshots/passed-tests.png)
+
+Tests failing in pipeline:
+![Tests passing in pipeline](./public/snapshots/failed-tests.png)
+### _GitHub Pipeline_
+Alongside the Actions, the pipeline also contains `Codecov` code coverage checks. These checks review the code coverage levels after each commit, and send the reports to the codecov application every time the codecov check is run for analytics and performance purposes.
+
+### Pipeline Checks:
+![Pipeline](./public/snapshots/github-pipelin.png)
+
+### CI/CD
+There are some enforced CI/CD rules that need to be fulfilled before you can merge in your pull request. This is to ensure that only high quality code is deployed:
+- All pipeline checks need to pass
+- Branch needs to be up to date 
+- At least one reviewer has to approve the pull request
+
+If these rules have not been met then the code cannot be merged in, as shown below:
+![Merge Block](./public/snapshots/merge-block.png)
 
 ## <ins>Standards</ins> ABDUL-SUBHAN
 
