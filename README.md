@@ -21,6 +21,16 @@ Page w todos added
 Checked todo
 Editing Modal
 
+
+`Todo app homepage`
+![Todo homepage](./img/Todo%20homepage.png)
+
+`Added Todo`
+![Added Todo](./img/Added%20Todo.png)
+
+`Edit Todo popup`
+![Edited Todo](./img/Edited%20Todo.png)
+
 ## <ins>Team Description</ins> SUMAIR
 Our team consisted of only two members. Due to this, each member undertook multiple roles in the team. Despite having individual roles, we wore multiple hats and discussed features collaboratively in our daily standups. 
 
@@ -111,15 +121,6 @@ Run `npm run start` and wait until a browser opens with the application
 
 ### Features of the application
 
-`Todo app homepage`
-![Todo homepage](./img/Todo%20homepage)
-
-`Added Todo`
-![Added Todo](./img/Added%20Todo.png)
-
-`Edit Todo popup`
-![Edited Todo](./img/Edited%20Todo.png)
-
 With this app, users can:
 - Add text in the textbox and submit with the `Add New Todo` button
 - Edit text of existing Todos with the edit button on the Todo
@@ -154,19 +155,22 @@ The board contained the following columns:
 - `Review` - once a PR was created, the corresponding ticket was moved to this column
 - `Done` - once a PR was merged, tickets were marked as completed in this column
 
-
 The board can be viewed via this link:
 [`https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share`](https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share)
 
-
 ## <ins>Test Methodologies and Tools</ins> ABDUL-SUBHAN
 
-- Types of tests done
-Unit testing (components + main page) + UI testing
-Integration testing (functionalities)
-Pipeline tests
-Smoke testing after each PR 
-Manual testing after PR merged, also at random times (written and followed test plans)
+### Types of tests
+
+The Todo app underwent multiple phases of testing to ensure reliability and functionality. 
+Automated tests were created and integrated in the CI pipelines; all the tests ran on every PR and reran automatically every time something was pushed to it. 
+Here are the forms of testing carried out and at what stage in development they occurred:
+
+- Manual smoke testing - For each PR, the contributor carried out build verification testing by running the app and manually adding, editing, and removing Todo items, to ensure essential features and components of the app were still functional after changes were made. 
+- Sanity testing - After a functional feature was added or fixed, this form of narrow regression testing was manually carried out by running the app and using the new feature/fix to ensure the minor changes or bug fixes worked as intended
+- Unit testing - For each React component created, each one required automated testing in isolation to test the functionality, its methods, and how it behaves with different inputs. This was automated with the Jest library to simulate component rendering, user interactions, and check the component's internal state and behavior. 
+- Integration testing (UI testing) - After building each React component, the interactions and collaboration between multiple components were tested to ensure that they work correctly together as a unit with the desired functionality. UI testing was automated with Jest, simulating user interactions such as clicking buttons, entering text into input fields, and reloading pages. 
+
 Code cov
 
 - evidence of test methods and tools (tables of tests, snapshots, code coverage)
