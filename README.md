@@ -73,6 +73,7 @@ Tests can be run with the following command:
 ```
 npm test <test file name or path>
 ```
+**React Testing Library** was used, which is a framework that uses Jest and is designed specifically for testing react components more efficiently. 
 **Codecov** was used with the [Codecov website](https://app.codecov.io/gh/ada-abdul-sumair/todo-application) for analytics of how many lines of code are covered
 Code coverage can be viewed locally in the tests with the following tag:
 ```
@@ -320,6 +321,7 @@ There are some enforced CI/CD rules that need to be fulfilled before you can mer
 - All pipeline checks need to pass
 - Branch needs to be up to date 
 - At least one reviewer has to approve the pull request
+Integration tests were written and can be viewed in the `mainpage.test.js` file, and are run as part of the pipeline checks
 
 If these rules have not been met then the code cannot be merged in, as shown below:
 ![Merge Block](./public/snapshots/merge-block.png)
