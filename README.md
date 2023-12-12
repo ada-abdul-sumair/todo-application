@@ -284,7 +284,7 @@ Run the script file to download and set up the git hook:
 ./setup-hooks.sh
 ```
 
-## <ins>CI Pipeline</ins> SUMAIR
+## <ins>CI Pipeline</ins>
 
 ### Trunk based development
 Trunk-based development practices have been utilised throughout the development of this project. It is a version control management practice where developers merge small, frequent updates to a core “trunk” or main branch. It streamlines merging and integration phases, enabling CI/CD and increasing software delivery and organizational performance.
