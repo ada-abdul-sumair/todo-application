@@ -193,6 +193,10 @@ Run the script file to download and set up the git hook:
 ```
 
 ## <ins>CI Pipeline</ins> SUMAIR
+
+### Trunk based development
+Trunk-based development practices have been utilised throughout the development of this project. It is a version control management practice where developers merge small, frequent updates to a core “trunk” or main branch. It streamlines merging and integration phases, enabling CI/CD and increasing software delivery and organizational performance.
+
 ### _GitHub Actions_
 
 GitHub Actions are workflows defined in code, stored alongside the code in a repository. GitHub Actions automate the SDLC, from building and testing to deploying. They are triggered by events, and executed in GitHub-hosted runners, allowing easy integration with GitHub repositories. Likewise, they sit directly in the GitHub Pipeline, dictating what can be merged into the codebase, based on their outcomes.
