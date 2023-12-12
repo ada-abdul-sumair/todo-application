@@ -295,6 +295,10 @@ The GitHub Actions integrated in this repository are:
 
 - **Automated testing** - An Action has been written to automatically run all tests within the codebase in the pipeline, including all unit tests and integration tests. The action is triggered whenever a pull request is created, or updated. It runs using NodeJS in the GitHub pipeline and will log all of the tests that have successfully passed or failed during the testing process. If any tests fail, they are logged, and merging will be blocked until it is fixed. This ensures that only high quality code that passes the tests are merged.
 
+`GitHub Workflows in a PR`
+![GitHub workflows](./img/GitHub%20workflows.png)
+
+
 ## <ins>SQA Standard: IEEE 730</ins> 
 
 ### Description of IEEE 730
