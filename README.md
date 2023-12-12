@@ -2,7 +2,7 @@
 
 - Todo application for SQA assignment 2
 
-## <ins>Project Description</ins> SUMAIR
+## <ins>Project Description</ins>
 
 This project is a simple To-Do list application, created to enable users to track what tasks they have completed, and what they still have left to do. The program has been designed to be used for a plethora of different purposes, some of which may include tracking your chores, shopping, or daily tasks.
 
@@ -26,7 +26,7 @@ The application features a simple and easy to use UI, with a singular page, that
 ### Edit todo item modal:
 ![Edit todo item modal](./public/snapshots/todo-edit.png)
 
-## <ins>Team Description</ins> SUMAIR
+## <ins>Team Description</ins>
 Our team consisted of only two members. Due to this, each member undertook multiple roles in the team. Despite having individual roles, we wore multiple hats and discussed features collaboratively in our daily standups. 
 
 **Abdul-Subhan Latif** - Abdul-Subhan was the lead QA tester on the team. His role in the project entailed writing tests for the application and ensuring SQA practices were implemented throughout the project lifecycle. Alongside this, Abdul-Subhan was heavily involved in the planning stage, designing the initial Figma for the Front-End and outlining the functional and non-functional requirements for the project.
@@ -58,29 +58,36 @@ Both members of the team evenly split the workload between themselves, with one 
 _Note: The line contributions is **NOT** an accurate reference for the contributions from each member, due to an error where the `node_modules` (prewritten packages) were committed alongside the rest of the code, causing the lines committed to be more than it should be for one member._
 _For a more accurate representation of code contribution, please go through each pull request, to view contributions from each member. This can be done using the search filter on the pull requests tab of the repository and setting the filter to: `is:pr is:merged`_
 
-## <ins>Tools Used</ins> SUMAIR
+## <ins>Tools Used</ins>
 
-- version control - GitHub
-Version & source control
-Reviewing
-Pipeline tests
+### Version control
 
-- testing - Jest / React Testing Library
-Unit testing (of components, main page)
-Integration tests (functionality)
+This project used **Git** for version controlling. 
+**GitHub** was used as the remote repository hosting service, providing other benefits like GitHub Actions, Workflows, and CI Pipelines. 
+This repo is part of the `ada-abdul-sumair` on GitHub organisation so both members of the team could review and edit PRs
 
-- test code coverage
-Code Cov (TO DO)
+### Testing
 
-- frameworks and libraries - React / MUI
-React - for FE
-Material UI (MUI) - premade components
+The **Jest** testing framework was used for automating unit tests, UI tests, and integration tests.
+Tests can be run with the following command:
+```
+npm test <test file name or path>
+```
+**Codecov** was used with the [Codecov website](https://app.codecov.io/gh/ada-abdul-sumair/todo-application) for analytics of how many lines of code are covered
+Code coverage can be viewed locally in the tests with the following tag:
+```
+npm test <test file name or path> -- --coverage
+```
 
-### _Linters_
+### Front-end
 
-_ESLint_
+The project was built using **React**, following and expanding on the **React-create-app** basic template. 
+See the instructions on how to run the application section for running the React app. 
+The **MUI** customizable library contains foundational and advanced UI elements that were implemented in this project, saving time from having to make them form scratch. 
 
-This project utilisies ESLint for analysing JavaScript code for potential errors, styling issues, and adherence to coding standards.
+### Linting
+
+This project utilisies **ESLint** for analysing JavaScript code for potential errors, styling issues, and adherence to coding standards.
 ESLint rules have been defined by the team in the .eslintrc.js file, in rukles for errors, warnings and styling have been customised.
 ESLint has been integrated in the `package.json` file to run after each commit and after each push.
 To manually run the linter on the code, run the command:
@@ -89,15 +96,25 @@ To manually run the linter on the code, run the command:
 npx eslint .
 ```
 
-Prettier - code formatting
+### Formatting
 
-- project management tools
-Figma - designs
-Jira - kanban board
-Git - version controlling
+The **Prettier** code formatter was used for code styling and formatting. 
+The prettier config file specified which styling rules were implemented across the code base. 
 
-- performance and accessibility audit
-Google Lighthouse (TO DO)
+### Project management tools
+
+**Figma** was used for designing the prototype of the app
+Below are the concept designs for the second version of the app that would have been created if the team had a greater time limit.
+`Figma designs`
+![Figma designs](./public/snapshots/figma-designs.png)
+
+The Kanban board was created using **Jira**, with each member of the team being a part of the team so that they can be assigned tickets that they can move across the board depending on their progress. 
+`Jira board`
+![Jira board](./public/snapshots/jira-board.png)
+
+### Performance and accessibility audit
+
+For auditing, **Google Lighthouse** was used, which is a Chrome extension that automates the auditing process, returning detailed analytics. See the audit section of this README for more information. 
 
 ## <ins>Instructions to Run and Use the Application</ins>
 
@@ -174,18 +191,18 @@ Codecov results for the repo can be viewed via this link:
 ### Testing screenshots
 
 `Jest tests running locally in the terminal`
-![Jest tests in terminal](./public/snapshots/Jest%20terminal%20tests.png)
+![Jest tests in terminal](./public/snapshots/jest-terminal-tests.png)
 
 `Pipeline tests automated workflow on GitHub`
-![Pipeline tests in GitHub](./public/snapshots/Pipeline%20tests.png)
+![Pipeline tests in GitHub](./public/snapshots/pipeline-tests.png)
 
 
 `Codecov repo lines covered`
-![Codecov](./public/snapshots/Codecov.png)
+![Codecov](./public/snapshots/codecov.png)
 
 
 `Test tables to run manual smoke testing`
-![Smoke test tables](./public/snapshots/Test%20tables.png)
+![Smoke test tables](./public/snapshots/test-tables.png)
 
 
 ## <ins>Coding Best Practices</ins> 
@@ -294,7 +311,7 @@ _Note: The automatic reviewer assign and automatic author assign features have b
 - **Automated testing** - An Action has been written to automatically run all tests within the codebase in the pipeline, including all unit tests and integration tests. The action is triggered whenever a pull request is created, or updated. It runs using NodeJS in the GitHub pipeline and will log all of the tests that have successfully passed or failed during the testing process. If any tests fail, they are logged, and merging will be blocked until it is fixed. This ensures that only high quality code that passes the tests are merged.
 
 `GitHub Workflows in a PR`
-![GitHub workflows](./public/snapshots/GitHub%20workflows.png)
+![GitHub workflows](./public/snapshots/github-workflows.png)
 
 
 ## <ins>SQA Standard: IEEE 730</ins> 
@@ -335,16 +352,16 @@ To test the flexibility of the application, Lighthouse allows for loading the we
 
 ### Snapshots
 
-Click [here](./public/snapshots/Lighthouse%20audit%20summary.pdf) to view Lighthouse's generated audit summary
+Click [here](./public/snapshots/lighthouse-audit-summary.pdf) to view Lighthouse's generated audit summary
 
 `Lighthouse audit for mobile view`
-![Lighthouse audit mobile](./public/snapshots/Lighthouse%20mobile%20view.png)
+![Lighthouse audit mobile](./public/snapshots/lighthouse-mobile-view.png)
 
 `Lightouse audit for desktop view`
-![Lighthouse audit desktop](./public/snapshots/Lighthouse%20desktop%20view.png)
+![Lighthouse audit desktop](./public/snapshots/lighthouse-desktop-view.png)
 
 `Lightouse audit for desktop view in incognito`
-![Lighthouse audit desktop incognito](./public/snapshots/Lighthouse%20desktop%20view%20incognito.png)
+![Lighthouse audit desktop incognito](./public/snapshots/lighthouse-desktop-view-incognito.png)
 
 
 ### Results
