@@ -324,6 +324,25 @@ There are some enforced CI/CD rules that need to be fulfilled before you can mer
 If these rules have not been met then the code cannot be merged in, as shown below:
 ![Merge Block](./public/snapshots/merge-block.png)
 
+## <ins>Standards</ins> ABDUL-SUBHAN
+
+Tests failing in pipeline:
+![Tests passing in pipeline](./public/snapshots/failed-tests.png)
+### _GitHub Pipeline_
+Alongside the Actions, the pipeline also contains `Codecov` code coverage checks. These checks review the code coverage levels after each commit, and send the reports to the codecov application every time the codecov check is run for analytics and performance purposes.
+
+### Pipeline Checks:
+![Pipeline](./public/snapshots/github-pipelin.png)
+
+### CI/CD
+There are some enforced CI/CD rules that need to be fulfilled before you can merge in your pull request. This is to ensure that only high quality code is deployed:
+- All pipeline checks need to pass
+- Branch needs to be up to date 
+- At least one reviewer has to approve the pull request
+
+If these rules have not been met then the code cannot be merged in, as shown below:
+![Merge Block](./public/snapshots/merge-block.png)
+
 ## <ins>SQA Standard: IEEE 730</ins> 
 
 ### Description of IEEE 730
