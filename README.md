@@ -158,47 +158,90 @@ The board contained the following columns:
 The board can be viewed via this link:
 [`https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share`](https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share)
 
-## <ins>Test Methodologies and Tools</ins> ABDUL-SUBHAN
+## <ins>Test Methodologies and Tools</ins>
 
 ### Types of tests
 
 The Todo app underwent multiple phases of testing to ensure reliability and functionality. 
-Automated tests were created and integrated in the CI pipelines; all the tests ran on every PR and reran automatically every time something was pushed to it. 
 Here are the forms of testing carried out and at what stage in development they occurred:
 
-- Manual smoke testing - For each PR, the contributor carried out build verification testing by running the app and manually adding, editing, and removing Todo items, to ensure essential features and components of the app were still functional after changes were made. 
+- Manual smoke testing - For each PR, the contributor carried out build verification testing by running the app and manually adding, editing, and removing Todo items, to ensure essential features and components of the app were still functional after changes were made. Each smoke test followed a testing table which contained the criteria for expected and actual results. 
 - Sanity testing - After a functional feature was added or fixed, this form of narrow regression testing was manually carried out by running the app and using the new feature/fix to ensure the minor changes or bug fixes worked as intended
 - Unit testing - For each React component created, each one required automated testing in isolation to test the functionality, its methods, and how it behaves with different inputs. This was automated with the Jest library to simulate component rendering, user interactions, and check the component's internal state and behavior. 
 - Integration testing (UI testing) - After building each React component, the interactions and collaboration between multiple components were tested to ensure that they work correctly together as a unit with the desired functionality. UI testing was automated with Jest, simulating user interactions such as clicking buttons, entering text into input fields, and reloading pages. 
 
-Code cov
+Automated tests were created and integrated in the CI pipelines; a workflow was added so that all the tests ran on every PR and reran automatically every time something was pushed to it. 
 
-- evidence of test methods and tools (tables of tests, snapshots, code coverage)
-Test tables
-Test plans
-Snapshots
-Code cov
-Pipeline tests ss
+Codecov was implemented to show the code coverage and which lines ran or didn't run with the automated tests. 
+Codecov results for the repo can be viewed via this link:
+[`https://app.codecov.io/gh/ada-abdul-sumair/todo-application`](https://app.codecov.io/gh/ada-abdul-sumair/todo-application)
 
-## <ins>Coding Best Practices</ins> ABDUL-SUBHAN
+### Testing screenshots
 
-- best coding practices applied
-Variable naming conventions
-File & function naming
-Repo structure
+`Jest tests running locally in the terminal`
+![Jest tests in terminal](./img/Jest%20terminal%20tests.png)
 
-- Linter 
-(eslint)
-Git Hook added
-Pre-commit
-Pre-push
+`Pipeline tests automated workflow on GitHub`
+![Pipeline tests in GitHub](./img/Pipeline%20tests.png)
 
-- Formatter 
-(prettier)
-Pre-commit
-- (conventional commits)
 
-- _Git Hooks_
+`Codecov repo lines covered`
+![Codecov](./img/Codecov.png)
+
+
+`Test tables to run manual smoke testing`
+![Smoke test tables](./img/Test%20tables.png)
+
+
+## <ins>Coding Best Practices</ins> 
+
+### Variable naming conventions
+
+The declared variables across the codebase follow a set of rules.
+`camelCase` is used for defining variables 
+`PascalCase` is used for defining functions 
+Descriptive naming is used to give enough detail about the purpose of the variable
+Appreviations are used where possible to avoid names getting too long
+
+### Repo structure
+
+This repo follows the folder structure created by the create-react-app tool in order to bootsrap this React project. 
+Static files go into the public folder
+Source files go into the src folder
+React components go into the components folder
+Tests are written in a test folder placed at the level of the file being tested
+All configuration files for dependencies are stored at the rool level
+
+### Linting
+
+The linter used for this app is ESLint. 
+The configuration `.eslintrc.json` file extends the react-app preset, which is the default configuration for Create React App projects.
+The configuration also contains the plugin:prettier/recommended preset, which enables the integration with Prettier, a code formatter.
+Husky and lint-staged are used to run ESLint as pre-commit and pre-push Git hooks, meaning that before every commit to Git and push to GitHub, the code will be automatically linted and formatted.
+
+### Formatting
+
+The formatter tool for this React app is Prettier. 
+The configuration `.prettierrc.json` file lists the formatting features that will take place. Prettier will:
+- Turn double quotes into single quotes
+- Add semicolons to the end of lines
+- Set the number of spaces for indentation levels to 2 spaces
+- Add trailing commas to the end of lists in objects and arrays
+- Keep line endings consistent
+A `.prettierignore` file contains the files that the formatter will skip formatting. 
+The repository uses Prettier as a pre-commit Git hook, meaning the code will be automatically formatted by Prettier before every commit.
+
+### Conventional commits
+
+Each PR title is written using a conventional commit format. 
+Conventional commits are a set of rules for creating an explicit commit history, describing the features, fixes, and breaking changes.
+The basic structure for conventional commits is as follows:
+`<type>: <description>`
+The `<type>` indicates the kind of change that the commit introduces, such as feat or bug
+The `<description>` is a concise summary of the change
+An example is: `feat: add todo list component`
+
+### Git Hooks
 
 Git hooks are scripts that Git automatically executes primarily on a local machine before or after events (like committing, pushing, pulling, etc).
 These hooks tailor the Git workflow to project-specific needs by enforcing coding standards, running tests, and preventing commits that don't meet predefined criteria.
@@ -206,7 +249,7 @@ Default Git hooks are stored in `./.git/hooks`.
 Created hooks are kept in `./git-hooks`
 The hooks created for this project are:
 
-### _Branch naming conventions_
+### Branch naming conventions
 
 Branches should be identified as feature|task|bugfix|hotfix, followed by the JIRA task id and a description, for example:
 
