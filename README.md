@@ -295,16 +295,64 @@ The GitHub Actions integrated in this repository are:
 
 - **Automated testing** - An Action has been written to automatically run all tests within the codebase in the pipeline, including all unit tests and integration tests. The action is triggered whenever a pull request is created, or updated. It runs using NodeJS in the GitHub pipeline and will log all of the tests that have successfully passed or failed during the testing process. If any tests fail, they are logged, and merging will be blocked until it is fixed. This ensures that only high quality code that passes the tests are merged.
 
-## <ins>Standards</ins> ABDUL-SUBHAN
+## <ins>SQA Standard: IEEE 730</ins> 
 
-- description of a standard (like IEEE730)
-- reason for choosing the standard
-- key features of standard applied
+### Description of IEEE 730
 
-## <ins>Performance and Accessibility Audit</ins> ABDUL-SUBHAN
+IEEE 730 is a common standard for software quality assurance. 
+This standard describes the activities and tasks that should be performed to ensure high quality of software products. It establishes clear requirements for initiating, planning, controlling, and executing the software quality assurance processes on a project. 
+It covers topics from management, documentation, reviews, audits, testing, problem resolution, and configuration management. 
 
-- tools used to check performance and accessibility of application
-- snapshots of key results
-- analyse results
+### Reasons for choosing IEEE 730
 
-(UIUX stuff about colours matching, colour theory, simplistic design etc)
+Reasons for choosing this SQA standard for this project include:
+- Defines quality objectives and criteria for this app, and how to measure and verify them throughout the development process.
+- Establishes the roles and responsibilities of the QA testers, and how they will communicate and coordinate with each other.
+- Plans and executes the QA activities and tasks, like code reviews, unit testing, and integration testing, and documents the results and outcomes.
+- Identifies and resolves any quality issues or defects that may arise during the development process, and prevent them from reoccurring in the future.
+- Manages and controls the changes and configurations of the software, ensuring their consistency and traceability.
+
+### Key implementations of IEEE 730
+
+The IEEE 730 standard was adhered to all throughout the project. Most notably in the following places:
+- The README file provides an overview of the project, its objectives, features, instructions for installation and usage, and other relevant documentation. It also contains information of how the team documented the software quality assurance plan, including the quality objectives, criteria, standards, roles, responsibilities, resources, tools, and methods. 
+- A CODE_REVIEW section (used and formatted by GitHub) that records the code review process, including the reviewers, criteria, checklist, feedback, and actions taken for each PR. 
+- TESTING files that carry out the testing process, including relevant test cases, test data, test results, and test coverage (using codecov) for each part of the codebase.
+- A CONFIGURATION_MANAGEMENT version control system in the form of Git that tracks the configuration management process, including the configuration items, baselines, versions, changes, and audits for each iteration. 
+
+## <ins>Performance and Accessibility Audit</ins>
+
+### Google Lighthouse
+
+Google Lighthouse is a tool used for measuring and improve the quality of your web pages. 
+It can run audits for performance, accessibility, progressive web apps, and SEO. 
+Lighthouse generates a report on how well the web app does, and provides suggestions on how to fix any issues.
+This repo uses Lighthouse for auditing the performance and accessibility of the webpage. 
+Lighthouse runs in Chrome DevTools, from the command line, as a Node module, or as a web UI. 
+To test the flexibility of the application, Lighthouse allows for loading the webpage with a mobile view as well as a desktop view.
+
+### Snapshots
+
+Click [here](./img/Lighthouse%20audit%20summary.pdf) to view Lighthouse's generated audit summary
+
+`Lighthouse audit for mobile view`
+![Lighthouse audit mobile](./img/Lighthouse%20mobile%20view.png)
+
+`Lightouse audit for desktop view`
+![Lighthouse audit desktop](./img/Lighthouse%20desktop%20view.png)
+
+`Lightouse audit for desktop view in incognito`
+![Lighthouse audit desktop incognito](./img/Lighthouse%20desktop%20view%20incognito.png)
+
+
+### Results
+
+Google Lighthouse's audit results prove the clear high quality in the accessibility, best practices, and search engine optimisation (SEO) of the application. 
+The performance varied across desktop and mobile layouts. 
+
+The accessibility is due the React components being versatile in the way they load on the DOM as they adjust with the screen width instead of overlapping or hiding, which usually traps the user focus. 
+From an inclusive perspective, orange was used for button colours as it is one of the most common colour-blind friendly colours that can be integrated in a project. 
+The best practices refers to every feature rendering properly without errors; there were no errors in the browser console, nor issues in the Issues tab in Chrome Devtools, and images were displayed correctly with the correct resolution and aspect ratio. 
+The site is suitable for SEO due to the meta data in things like the `<meta name>` HTML tag. The simplicity of the page allows for customisation with the webpage like implementing a splash screen, and seamless page transitions (there is only one page here which removes any network lag)
+The performance varies due to multiple factors. Cache restoration upon refreshing slows down the page loading times, as there is no backend to this application, so instead relies on local cache memory which the website must wait for. Note that Lighthouse performance is affected by other chrome extensions slowing it down, making the audit less reliable. Running the audit in incognito shows the best performance the web app can display, although this data is likely to be less realistic as users will be likely to have extensions as well.
+It is important to note that this web app was not designed with support for mobile applications; it is due to the flexibility of the React components that the layout can adjust to smaller devices which is an added benefit. 
