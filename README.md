@@ -2,7 +2,7 @@
 
 - Todo application for SQA assignment 2
 
-## <ins>Project Description</ins> SUMAIR
+## <ins>Project Description</ins>
 
 This project is a simple To-Do list application, created to enable users to track what tasks they have completed, and what they still have left to do. The program has been designed to be used for a plethora of different purposes, some of which may include tracking your chores, shopping, or daily tasks.
 
@@ -26,8 +26,7 @@ The application features a simple and easy to use UI, with a singular page, that
 ### Edit todo item modal:
 ![Edit todo item modal](./public/snapshots/todo-edit.png)
 
-
-## <ins>Team Description</ins> SUMAIR
+## <ins>Team Description</ins>
 Our team consisted of only two members. Due to this, each member undertook multiple roles in the team. Despite having individual roles, we wore multiple hats and discussed features collaboratively in our daily standups. 
 
 **Abdul-Subhan Latif** - Abdul-Subhan was the lead QA tester on the team. His role in the project entailed writing tests for the application and ensuring SQA practices were implemented throughout the project lifecycle. Alongside this, Abdul-Subhan was heavily involved in the planning stage, designing the initial Figma for the Front-End and outlining the functional and non-functional requirements for the project.
@@ -59,29 +58,37 @@ Both members of the team evenly split the workload between themselves, with one 
 _Note: The line contributions is **NOT** an accurate reference for the contributions from each member, due to an error where the `node_modules` (prewritten packages) were committed alongside the rest of the code, causing the lines committed to be more than it should be for one member._
 _For a more accurate representation of code contribution, please go through each pull request, to view contributions from each member. This can be done using the search filter on the pull requests tab of the repository and setting the filter to: `is:pr is:merged`_
 
-## <ins>Tools Used</ins> SUMAIR
+## <ins>Tools Used</ins>
 
-- version control - GitHub
-Version & source control
-Reviewing
-Pipeline tests
+### Version control
 
-- testing - Jest / React Testing Library
-Unit testing (of components, main page)
-Integration tests (functionality)
+This project used **Git** for version controlling. 
+**GitHub** was used as the remote repository hosting service, providing other benefits like GitHub Actions, Workflows, and CI Pipelines. 
+This repo is part of the `ada-abdul-sumair` on GitHub organisation so both members of the team could review and edit PRs
 
-- test code coverage
-Code Cov (TO DO)
+### Testing
 
-- frameworks and libraries - React / MUI
-React - for FE
-Material UI (MUI) - premade components
+The **Jest** testing framework was used for automating unit tests, UI tests, and integration tests.
+Tests can be run with the following command:
+```
+npm test <test file name or path>
+```
+**React Testing Library** was used, which is a framework that uses Jest and is designed specifically for testing react components more efficiently. 
+**Codecov** was used with the [Codecov website](https://app.codecov.io/gh/ada-abdul-sumair/todo-application) for analytics of how many lines of code are covered
+Code coverage can be viewed locally in the tests with the following tag:
+```
+npm test <test file name or path> -- --coverage
+```
 
-### _Linters_
+### Front-end
 
-_ESLint_
+The project was built using **React**, following and expanding on the **React-create-app** basic template. 
+See the instructions on how to run the application section for running the React app. 
+The **MUI** customizable library contains foundational and advanced UI elements that were implemented in this project, saving time from having to make them form scratch. 
 
-This project utilisies ESLint for analysing JavaScript code for potential errors, styling issues, and adherence to coding standards.
+### Linting
+
+This project utilisies **ESLint** for analysing JavaScript code for potential errors, styling issues, and adherence to coding standards.
 ESLint rules have been defined by the team in the .eslintrc.js file, in rukles for errors, warnings and styling have been customised.
 ESLint has been integrated in the `package.json` file to run after each commit and after each push.
 To manually run the linter on the code, run the command:
@@ -90,79 +97,164 @@ To manually run the linter on the code, run the command:
 npx eslint .
 ```
 
-Prettier - code formatting
+### Formatting
 
-- project management tools
-Figma - designs
-Jira - kanban board
-Git - version controlling
+The **Prettier** code formatter was used for code styling and formatting. 
+The prettier config file specified which styling rules were implemented across the code base. 
 
-- performance and accessibility audit
-Google Lighthouse (TO DO)
+### Project management tools
 
-## <ins>Instructions to Run the Application</ins> ABDUL-SUBHAN
+**Figma** was used for designing the prototype of the app
+Below are the concept designs for the second version of the app that would have been created if the team had a greater time limit.
+`Figma designs`
+![Figma designs](./public/snapshots/figma-designs.png)
 
-- how the project can be cloned and run
-Open GitHub link
-Git clone link
-At root level, `npm run start`
+The Kanban board was created using **Jira**, with each member of the team being a part of the team so that they can be assigned tickets that they can move across the board depending on their progress. 
+`Jira board`
+![Jira board](./public/snapshots/jira-board.png)
 
-- how to use the application
-Add text in textbox, press add button
-Edit button to open modal to change text
-Done button to strikethrough text to mark as done
-Delete button to delete todo
-'Delete all' button to delete all todos
+### Performance and accessibility audit
 
-## <ins>Project Workflow</ins> ABDUL-SUBHAN
+For auditing, **Google Lighthouse** was used, which is a Chrome extension that automates the auditing process, returning detailed analytics. See the audit section of this README for more information. 
 
-- project management strategies
-Agile methodology: Scrum-Kanban hybrid
-Trunk-based development
+## <ins>Instructions to Run and Use the Application</ins>
 
-- retrospectives
-Daily stand-ups, give updates. Sometimes done over chat instead of a call - allowing greater flexibility and greater logging of chats
+### How to clone the repository
 
-- kanban board
-Jira board
+Navigate to the application's public GitHub repository via this link: 
+[`https://github.com/sumairruhani2/todo-application`](https://github.com/sumairruhani2/todo-application)
 
-## <ins>Test Methodologies and Tools</ins> ABDUL-SUBHAN
+Clone the repo locally by running `git clone ` followed by the HTTPS or SSH link 
 
-- Types of tests done
-Unit testing (components + main page) + UI testing
-Integration testing (functionalities)
-Pipeline tests
-Smoke testing after each PR 
-Manual testing after PR merged, also at random times (written and followed test plans)
-Code cov
+### How to start the application
 
-- evidence of test methods and tools (tables of tests, snapshots, code coverage)
-Test tables
-Test plans
-Snapshots
-Code cov
-Pipeline tests ss
+Open the codebase and run `npm i` from root level
 
-## <ins>Coding Best Practices</ins> ABDUL-SUBHAN
+Run `npm run start` and wait until a browser opens with the application
 
-- best coding practices applied
-Variable naming conventions
-File & function naming
-Repo structure
+### Features of the application
 
-- Linter 
-(eslint)
-Git Hook added
-Pre-commit
-Pre-push
+With this app, users can:
+- Add text in the textbox and submit with the `Add New Todo` button
+- Edit text of existing Todos with the edit button on the Todo
+- Mark Todos as done which adds a strikethrough to the text
+- Delete individial Todos with the delete button on the Todo
+- Delete all Todos with the `Delete All Todos` button
 
-- Formatter 
-(prettier)
-Pre-commit
-- (mention trunk-based development) 
-- (conventional commits)
+## <ins>Project Workflow</ins>
 
-- _Git Hooks_
+### Project management strategy
+
+This project adopted an agile strategy utilising the Scrum-Kanban hybrid frameworks. 
+The team decided this hybrid approach was the most suitable for this project for the following reasons:
+- Flexibility - Scrum provides structure with fixed-length sprints while accommodating changes in priorities and incorporating a continuous flow of work with Kanban
+- Continuous Delivery - A balance between regular delivery milestones with sprints in Scrum and a continuos delivery model with Kanban allows results to be yielded faster
+- Enhanced Visual Management - Kanban utilises collaborative visual boards to represent work flow
+- Enhanced Collaboration - Scrum promotes regular check-ins with regular ceremonies and communication and Kanban encourages continuous collaboration.
+
+### Retrospectives
+
+As part of the Scrum framework, daily retrospectives were held at the earliest time in the mornings to provide updates regarding features, bugs, blockers or any other project detail. 
+Retrospectives sometimes took place Google Chat instead of a call via Google Meet; this made technical comments and questions easier to process and respond to appropriately. 
+Having only 2 members in the team allowed for greater flexibility in communication methods and timings
+
+### Kanban board
+
+A kanban board was created using Jira Software. 
+2 types of tickets were used: features, for any new changes, and bugfixes, for fixing broken features
+The board contained the following columns:
+- `To Do` - all the created tickets were stored under this heading until picked up
+- `In Progress` - tickets were assigned and picked up in this column
+- `Review` - once a PR was created, the corresponding ticket was moved to this column
+- `Done` - once a PR was merged, tickets were marked as completed in this column
+
+The board can be viewed via this link:
+[`https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share`](https://jira.external-share.com/issue/102592/abdul-subhan_latif_@_board_share)
+
+## <ins>Test Methodologies and Tools</ins>
+
+### Types of tests
+
+The Todo app underwent multiple phases of testing to ensure reliability and functionality. 
+Here are the forms of testing carried out and at what stage in development they occurred:
+
+- Manual smoke testing - For each PR, the contributor carried out build verification testing by running the app and manually adding, editing, and removing Todo items, to ensure essential features and components of the app were still functional after changes were made. Each smoke test followed a testing table which contained the criteria for expected and actual results. 
+- Sanity testing - After a functional feature was added or fixed, this form of narrow regression testing was manually carried out by running the app and using the new feature/fix to ensure the minor changes or bug fixes worked as intended
+- Unit testing - For each React component created, each one required automated testing in isolation to test the functionality, its methods, and how it behaves with different inputs. This was automated with the Jest library to simulate component rendering, user interactions, and check the component's internal state and behavior. 
+- Integration testing (UI testing) - After building each React component, the interactions and collaboration between multiple components were tested to ensure that they work correctly together as a unit with the desired functionality. UI testing was automated with Jest, simulating user interactions such as clicking buttons, entering text into input fields, and reloading pages. 
+
+Automated tests were created and integrated in the CI pipelines; a workflow was added so that all the tests ran on every PR and reran automatically every time something was pushed to it. 
+
+Codecov was implemented to show the code coverage and which lines ran or didn't run with the automated tests. 
+Codecov results for the repo can be viewed via this link:
+[`https://app.codecov.io/gh/ada-abdul-sumair/todo-application`](https://app.codecov.io/gh/ada-abdul-sumair/todo-application)
+
+### Testing screenshots
+
+`Jest tests running locally in the terminal`
+![Jest tests in terminal](./public/snapshots/jest-terminal-tests.png)
+
+`Pipeline tests automated workflow on GitHub`
+![Pipeline tests in GitHub](./public/snapshots/pipeline-tests.png)
+
+
+`Codecov repo lines covered`
+![Codecov](./public/snapshots/codecov.png)
+
+
+`Test tables to run manual smoke testing`
+![Smoke test tables](./public/snapshots/test-tables.png)
+
+
+## <ins>Coding Best Practices</ins> 
+
+### Variable naming conventions
+
+The declared variables across the codebase follow a set of rules.
+`camelCase` is used for defining variables 
+`PascalCase` is used for defining functions 
+Descriptive naming is used to give enough detail about the purpose of the variable
+Appreviations are used where possible to avoid names getting too long
+
+### Repo structure
+
+This repo follows the folder structure created by the create-react-app tool in order to bootsrap this React project. 
+Static files go into the public folder
+Source files go into the src folder
+React components go into the components folder
+Tests are written in a test folder placed at the level of the file being tested
+All configuration files for dependencies are stored at the rool level
+
+### Linting
+
+The linter used for this app is ESLint. 
+The configuration `.eslintrc.json` file extends the react-app preset, which is the default configuration for Create React App projects.
+The configuration also contains the plugin:prettier/recommended preset, which enables the integration with Prettier, a code formatter.
+Husky and lint-staged are used to run ESLint as pre-commit and pre-push Git hooks, meaning that before every commit to Git and push to GitHub, the code will be automatically linted and formatted.
+
+### Formatting
+
+The formatter tool for this React app is Prettier. 
+The configuration `.prettierrc.json` file lists the formatting features that will take place. Prettier will:
+- Turn double quotes into single quotes
+- Add semicolons to the end of lines
+- Set the number of spaces for indentation levels to 2 spaces
+- Add trailing commas to the end of lists in objects and arrays
+- Keep line endings consistent
+A `.prettierignore` file contains the files that the formatter will skip formatting. 
+The repository uses Prettier as a pre-commit Git hook, meaning the code will be automatically formatted by Prettier before every commit.
+
+### Conventional commits
+
+Each PR title is written using a conventional commit format. 
+Conventional commits are a set of rules for creating an explicit commit history, describing the features, fixes, and breaking changes.
+The basic structure for conventional commits is as follows:
+`<type>: <description>`
+The `<type>` indicates the kind of change that the commit introduces, such as feat or bug
+The `<description>` is a concise summary of the change
+An example is: `feat: add todo list component`
+
+### Git Hooks
 
 Git hooks are scripts that Git automatically executes primarily on a local machine before or after events (like committing, pushing, pulling, etc).
 These hooks tailor the Git workflow to project-specific needs by enforcing coding standards, running tests, and preventing commits that don't meet predefined criteria.
@@ -170,7 +262,7 @@ Default Git hooks are stored in `./.git/hooks`.
 Created hooks are kept in `./git-hooks`
 The hooks created for this project are:
 
-### _Branch naming conventions_
+### Branch naming conventions
 
 Branches should be identified as feature|task|bugfix|hotfix, followed by the JIRA task id and a description, for example:
 
@@ -229,20 +321,87 @@ There are some enforced CI/CD rules that need to be fulfilled before you can mer
 - All pipeline checks need to pass
 - Branch needs to be up to date 
 - At least one reviewer has to approve the pull request
+Integration tests were written and can be viewed in the `mainpage.test.js` file, and are run as part of the pipeline checks
 
 If these rules have not been met then the code cannot be merged in, as shown below:
 ![Merge Block](./public/snapshots/merge-block.png)
 
 ## <ins>Standards</ins> ABDUL-SUBHAN
 
-- description of a standard (like IEEE730)
-- reason for choosing the standard
-- key features of standard applied
+Tests failing in pipeline:
+![Tests passing in pipeline](./public/snapshots/failed-tests.png)
+### _GitHub Pipeline_
+Alongside the Actions, the pipeline also contains `Codecov` code coverage checks. These checks review the code coverage levels after each commit, and send the reports to the codecov application every time the codecov check is run for analytics and performance purposes.
 
-## <ins>Performance and Accessibility Audit</ins> ABDUL-SUBHAN
+### Pipeline Checks:
+![Pipeline](./public/snapshots/github-pipelin.png)
 
-- tools used to check performance and accessibility of application
-- snapshots of key results
-- analyse results
+### CI/CD
+There are some enforced CI/CD rules that need to be fulfilled before you can merge in your pull request. This is to ensure that only high quality code is deployed:
+- All pipeline checks need to pass
+- Branch needs to be up to date 
+- At least one reviewer has to approve the pull request
 
-(UIUX stuff about colours matching, colour theory, simplistic design etc)
+If these rules have not been met then the code cannot be merged in, as shown below:
+![Merge Block](./public/snapshots/merge-block.png)
+
+## <ins>SQA Standard: IEEE 730</ins> 
+
+### Description of IEEE 730
+
+IEEE 730 is a common standard for software quality assurance. 
+This standard describes the activities and tasks that should be performed to ensure high quality of software products. It establishes clear requirements for initiating, planning, controlling, and executing the software quality assurance processes on a project. 
+It covers topics from management, documentation, reviews, audits, testing, problem resolution, and configuration management. 
+
+### Reasons for choosing IEEE 730
+
+Reasons for choosing this SQA standard for this project include:
+- Defines quality objectives and criteria for this app, and how to measure and verify them throughout the development process.
+- Establishes the roles and responsibilities of the QA testers, and how they will communicate and coordinate with each other.
+- Plans and executes the QA activities and tasks, like code reviews, unit testing, and integration testing, and documents the results and outcomes.
+- Identifies and resolves any quality issues or defects that may arise during the development process, and prevent them from reoccurring in the future.
+- Manages and controls the changes and configurations of the software, ensuring their consistency and traceability.
+
+### Key implementations of IEEE 730
+
+The IEEE 730 standard was adhered to all throughout the project. Most notably in the following places:
+- The README file provides an overview of the project, its objectives, features, instructions for installation and usage, and other relevant documentation. It also contains information of how the team documented the software quality assurance plan, including the quality objectives, criteria, standards, roles, responsibilities, resources, tools, and methods. 
+- A CODE_REVIEW section (used and formatted by GitHub) that records the code review process, including the reviewers, criteria, checklist, feedback, and actions taken for each PR. 
+- TESTING files that carry out the testing process, including relevant test cases, test data, test results, and test coverage (using codecov) for each part of the codebase.
+- A CONFIGURATION_MANAGEMENT version control system in the form of Git that tracks the configuration management process, including the configuration items, baselines, versions, changes, and audits for each iteration. 
+
+## <ins>Performance and Accessibility Audit</ins>
+
+### Google Lighthouse
+
+Google Lighthouse is a tool used for measuring and improve the quality of your web pages. 
+It can run audits for performance, accessibility, progressive web apps, and SEO. 
+Lighthouse generates a report on how well the web app does, and provides suggestions on how to fix any issues.
+This repo uses Lighthouse for auditing the performance and accessibility of the webpage. 
+Lighthouse runs in Chrome DevTools, from the command line, as a Node module, or as a web UI. 
+To test the flexibility of the application, Lighthouse allows for loading the webpage with a mobile view as well as a desktop view.
+
+### Snapshots
+
+Click [here](./public/snapshots/lighthouse-audit-summary.pdf) to view Lighthouse's generated audit summary
+
+`Lighthouse audit for mobile view`
+![Lighthouse audit mobile](./public/snapshots/lighthouse-mobile-view.png)
+
+`Lightouse audit for desktop view`
+![Lighthouse audit desktop](./public/snapshots/lighthouse-desktop-view.png)
+
+`Lightouse audit for desktop view in incognito`
+![Lighthouse audit desktop incognito](./public/snapshots/lighthouse-desktop-view-incognito.png)
+
+### Results
+
+Google Lighthouse's audit results prove the clear high quality in the accessibility, best practices, and search engine optimisation (SEO) of the application. 
+The performance varied across desktop and mobile layouts. 
+
+The accessibility is due the React components being versatile in the way they load on the DOM as they adjust with the screen width instead of overlapping or hiding, which usually traps the user focus. 
+From an inclusive perspective, orange was used for button colours as it is one of the most common colour-blind friendly colours that can be integrated in a project. 
+The best practices refers to every feature rendering properly without errors; there were no errors in the browser console, nor issues in the Issues tab in Chrome Devtools, and images were displayed correctly with the correct resolution and aspect ratio. 
+The site is suitable for SEO due to the meta data in things like the `<meta name>` HTML tag. The simplicity of the page allows for customisation with the webpage like implementing a splash screen, and seamless page transitions (there is only one page here which removes any network lag)
+The performance varies due to multiple factors. Cache restoration upon refreshing slows down the page loading times, as there is no backend to this application, so instead relies on local cache memory which the website must wait for. Note that Lighthouse performance is affected by other chrome extensions slowing it down, making the audit less reliable. Running the audit in incognito shows the best performance the web app can display, although this data is likely to be less realistic as users will be likely to have extensions as well.
+It is important to note that this web app was not designed with support for mobile applications; it is due to the flexibility of the React components that the layout can adjust to smaller devices which is an added benefit. 
