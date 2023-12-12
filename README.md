@@ -26,17 +26,6 @@ The application features a simple and easy to use UI, with a singular page, that
 ### Edit todo item modal:
 ![Edit todo item modal](./public/snapshots/todo-edit.png)
 
-
-
-`Todo app homepage`
-![Todo homepage](./img/Todo%20homepage.png)
-
-`Added Todo`
-![Added Todo](./img/Added%20Todo.png)
-
-`Edit Todo popup`
-![Edited Todo](./img/Edited%20Todo.png)
-
 ## <ins>Team Description</ins> SUMAIR
 Our team consisted of only two members. Due to this, each member undertook multiple roles in the team. Despite having individual roles, we wore multiple hats and discussed features collaboratively in our daily standups. 
 
@@ -185,18 +174,18 @@ Codecov results for the repo can be viewed via this link:
 ### Testing screenshots
 
 `Jest tests running locally in the terminal`
-![Jest tests in terminal](./img/Jest%20terminal%20tests.png)
+![Jest tests in terminal](./public/snapshots/Jest%20terminal%20tests.png)
 
 `Pipeline tests automated workflow on GitHub`
-![Pipeline tests in GitHub](./img/Pipeline%20tests.png)
+![Pipeline tests in GitHub](./public/snapshots/Pipeline%20tests.png)
 
 
 `Codecov repo lines covered`
-![Codecov](./img/Codecov.png)
+![Codecov](./public/snapshots/Codecov.png)
 
 
 `Test tables to run manual smoke testing`
-![Smoke test tables](./img/Test%20tables.png)
+![Smoke test tables](./public/snapshots/Test%20tables.png)
 
 
 ## <ins>Coding Best Practices</ins> 
@@ -305,7 +294,7 @@ _Note: The automatic reviewer assign and automatic author assign features have b
 - **Automated testing** - An Action has been written to automatically run all tests within the codebase in the pipeline, including all unit tests and integration tests. The action is triggered whenever a pull request is created, or updated. It runs using NodeJS in the GitHub pipeline and will log all of the tests that have successfully passed or failed during the testing process. If any tests fail, they are logged, and merging will be blocked until it is fixed. This ensures that only high quality code that passes the tests are merged.
 
 `GitHub Workflows in a PR`
-![GitHub workflows](./img/GitHub%20workflows.png)
+![GitHub workflows](./public/snapshots/GitHub%20workflows.png)
 
 
 ## <ins>SQA Standard: IEEE 730</ins> 
@@ -346,16 +335,16 @@ To test the flexibility of the application, Lighthouse allows for loading the we
 
 ### Snapshots
 
-Click [here](./img/Lighthouse%20audit%20summary.pdf) to view Lighthouse's generated audit summary
+Click [here](./public/snapshots/Lighthouse%20audit%20summary.pdf) to view Lighthouse's generated audit summary
 
 `Lighthouse audit for mobile view`
-![Lighthouse audit mobile](./img/Lighthouse%20mobile%20view.png)
+![Lighthouse audit mobile](./public/snapshots/Lighthouse%20mobile%20view.png)
 
 `Lightouse audit for desktop view`
-![Lighthouse audit desktop](./img/Lighthouse%20desktop%20view.png)
+![Lighthouse audit desktop](./public/snapshots/Lighthouse%20desktop%20view.png)
 
 `Lightouse audit for desktop view in incognito`
-![Lighthouse audit desktop incognito](./img/Lighthouse%20desktop%20view%20incognito.png)
+![Lighthouse audit desktop incognito](./public/snapshots/Lighthouse%20desktop%20view%20incognito.png)
 
 
 ### Results
